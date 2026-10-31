@@ -1,59 +1,35 @@
-*{
+```css
+/* Reset default styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* body{
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    text-align: center;
-}
-
-h1{
-    padding: 20px;
-    color: #333;
-} 
- .content{
-    color: brown;
- }
- .newClass{
-    background-color: aqua;
- } */
-
-.developer-credit {
-    margin-top: 25px;
-    text-align: center;
-    font-size: 14px;
-    color: #555;
-    letter-spacing: 1px;
-}
-
-.developer-credit span {
-    color: #6c35de;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.developer-credit p {
-    margin-top: 6px;
-    font-size: 12px;
-    color: #888;
-}
-```
-
-body{
+/* Body styling */
+body {
     background-color: #548687;
     text-align: center;
+    font-family: Arial, sans-serif;
 }
-.container{
-    height: 70vh;
-     display: flex;
+
+/* Main heading */
+h1 {
+    padding: 20px;
+    color: #ffffff;
+}
+
+/* Game container */
+.container {
+    min-height: 70vh;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
-.game{
+
+/* Game board */
+.game {
     height: 60vmin;
     width: 60vmin;
     display: flex;
@@ -62,45 +38,115 @@ body{
     align-items: center;
     gap: 1.5vmin;
 }
-.box{
+
+/* Game boxes */
+.box {
     height: 18vmin;
     width: 18vmin;
     border-radius: 0.5rem;
     border: none;
-    box-shadow: 0 0 1rem rgba(0,0,0,0.3);
-    font-size:8vmin ;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    font-size: 8vmin;
     color: #b0413e;
     background-color: #ffffc9;
+    cursor: pointer;
 }
-#reset-btn{
-    padding: 0.5rem;
-    font-size:0.5rem ;
+
+/* Hover effect for boxes */
+.box:hover {
+    background-color: #fff4a3;
+}
+
+/* Reset Game and New Game buttons */
+#reset-btn,
+#new-btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
     background-color: #191913;
     color: white;
     border-radius: 0.5rem;
     border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
-#new-btn{
-    padding: 0.5rem;
-    font-size:0.5rem ;
-    background-color: #191913;
-    color: white;
-    border-radius: 0.5rem;
-    border: none;
+
+/* Button hover effect */
+#reset-btn:hover,
+#new-btn:hover {
+    background-color: #39392f;
 }
-#msg{
+
+/* Winner message */
+#msg {
     color: #ffffc7;
-    font-size:8vmin ;
+    font-size: 8vmin;
+    font-weight: bold;
 }
-.msg-container{
-    height: 110vmin;
+
+/* Winner message container */
+.msg-container {
+    min-height: 30vmin;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 1rem;
-   
 }
-.hide{
+
+/* Hide elements */
+.hide {
     display: none;
 }
+
+/* Developer credit */
+.developer-credit {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+/* Developer name */
+.developer-credit span {
+    color: #ffffc9;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Developer tagline */
+.developer-credit p {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #e0eeee;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .game {
+        height: 85vmin;
+        width: 85vmin;
+        gap: 2vmin;
+    }
+
+    .box {
+        height: 26vmin;
+        width: 26vmin;
+        font-size: 12vmin;
+    }
+
+    #msg {
+        font-size: 7vmin;
+    }
+
+    #reset-btn,
+    #new-btn {
+        font-size: 0.9rem;
+    }
+}
+```
